@@ -1,0 +1,63 @@
+# Zhivaldo Fabio H.
+# 71200608
+
+'''
+Revy bertemu seorang wanita cantik menawan & bahenol.
+Dia ingin menyimpan nomornya dan mengontaknya lagi nanti.
+Setelahnya dia bertemu wanita yang cantik dan soleha.
+Dia ingin berkenalan Juga akan tetapi bingung cara menyimpan nomor cewe nya.
+Bantu revy menyimpan nomor dengan membuat program Number Savinator!!
+
+input :
+- Pilihan
+- Jumlah yang mau di simpan
+- Nama
+- Nomor
+
+Proses & Output
+    Setelah memilih Jumlah Kontak, program akan terus meminta input nomor dan nama
+dan setelahnya di save dan selesai.
+'''
+
+import time
+
+list1 = []
+list2 = []
+
+while True:
+    print ('='*10,'NUMBER SAVeNATOR','='*10)
+    print ()
+    print ('1. Save Number \n2. View List \n3. Exit.')
+    choice = input('Input Choices : ')
+    print('\n')
+
+    if choice in ('1'):
+        print ('=== Save Number ===')
+        count = int(input('Input Count : '))
+
+        
+        for i in range (count):
+            name = input('Input Name : ')
+            number = input('Input Number :\n')
+            list1.append(name)
+            list2.append(number)
+        print ('Number Saved!\n\n')
+       
+       
+
+    elif choice == '2':
+        print ('='*10,'Contact List','='*10)
+        print ('Name','\t\t\t','Number')
+        for i in range (len(list1)):
+            print (list1[i],'\t\t\t',list2[i])
+        print()
+
+    elif choice == '3':
+        time.sleep(1)
+        print ('Exiting...')
+        time.sleep(1.5)
+        exit()
+    
+    else:
+        print('Error... \nServices Unavailable\n\nPlease Contact Administrator!')
+        time.sleep(2)
